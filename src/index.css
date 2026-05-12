@@ -5,16 +5,29 @@
 ========================= */
 
 @theme {
-
   /* COLORS */
 
-  --color-primary: #fbbf24;
+  --color-background: #0f0f11;
+  --color-surface: #18181b;
 
-  --color-dark: #09090b;
+  --color-primary: #381932;
+  --color-secondary: #fff3e6;
 
-  --color-card: #18181b;
+  --color-text: #fff3e6;
+  --color-text-muted: #b3a8ae;
 
-  --color-muted: #a1a1aa;
+  --color-border: #4d2a47;
 
   /* FONTS */
+
+  --font-primary: "Inter", sans-serif;
+
+  /* RADIUS */
+
+  --radius-card: 24px;
+  --radius-button: 18px;
+
+  /* SHADOWS */
+
+  --shadow-primary: 0 10px 30px rgba(56, 25, 50, 0.3);
 }

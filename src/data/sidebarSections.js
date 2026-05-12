@@ -1,0 +1,151 @@
+const sidebarSections = [
+  {
+    title: "Basic UI",
+    items: [
+      "Accordion",
+      "Alert",
+      "Badge",
+      "Breadcrumb",
+      "Button",
+      "Card",
+      "Checkbox",
+      "Dialog",
+      "Divider",
+      "Drawer",
+      "Dropdown",
+      "Input",
+      "Modal",
+      "Pagination",
+      "Popover",
+      "Progress",
+      "Radio",
+      "Select",
+      "Skeleton",
+      "Spinner",
+      "Switch",
+      "Tabs",
+      "Tags",
+      "Textarea",
+      "Toast",
+      "Toggle",
+      "Tooltip",
+    ],
+  },
+
+  {
+    title: "Layout",
+    items: [
+      "Container",
+      "Grid",
+      "Layout",
+      "Section",
+      "Sidebar",
+      "Wrapper",
+    ],
+  },
+
+  {
+    title: "Navigation",
+    items: [
+      "Menu",
+      "Navbar",
+      "Navigation",
+      "Scroll",
+      "Search",
+    ],
+  },
+
+  {
+    title: "Typography & Visual",
+    items: [
+      "Animation",
+      "Background",
+      "Glow",
+      "Hover",
+      "Icon",
+      "Image",
+      "Logo",
+      "Theme",
+      "Timeline",
+      "Typography",
+      "Video",
+    ],
+  },
+
+  {
+    title: "Data Display",
+    items: [
+      "Calendar",
+      "Carousel",
+      "Chart",
+      "Code",
+      "Copy",
+      "Counter",
+      "Datepicker",
+      "List",
+      "Stats",
+      "Stepper",
+      "Table",
+    ],
+  },
+
+  {
+    title: "Feedback & States",
+    items: [
+      "Empty",
+      "Error",
+      "Feedback",
+      "Loader",
+      "Notification",
+    ],
+  },
+
+  {
+    title: "User & Auth",
+    items: [
+      "Auth",
+      "Avatar",
+      "Onboarding",
+      "Otp",
+      "Profile",
+      "Settings",
+      "User",
+    ],
+  },
+
+  {
+    title: "Content",
+    items: [
+      "Banner",
+      "Blog",
+      "Faq",
+      "Feature",
+      "Footer",
+      "Gallery",
+      "Header",
+      "Hero",
+      "Home",
+      "Message",
+      "Review",
+      "Team",
+      "Testimonial",
+    ],
+  },
+
+  {
+    title: "Advanced / App",
+    items: [
+      "Chat",
+      "Dashboard",
+      "Editor",
+      "Form",
+      "Map",
+      "Payment",
+      "Pricing",
+      "Project",
+      "Rating",
+      "Upload",
+    ],
+  },
+];
+export default sidebarSections;
