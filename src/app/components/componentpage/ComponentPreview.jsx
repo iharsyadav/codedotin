@@ -1,97 +1,77 @@
-import { useState } from "react";
+// src/components/ui/ComponentPreview.jsx
 
-import { Copy, Moon,} from "lucide-react";
+import { useState } from "react";
 
 export default function ComponentPreview({
   title,
   description,
-  children,
+  preview,
   code,
+  fileName = "Component.jsx",
 }) {
-  const [tab, setTab] = useState("preview");
-
-  const copyCode = async () => {
-    await navigator.clipboard.writeText(code);
-  };
+  const [showCode, setShowCode] = useState(false);
 
   return (
-    <section className="space-y-6">
-
+    <section className="mt-14">
       {/* Header */}
-      <div className="flex items-start justify-between gap-6">
-
+      <div className="flex items-center justify-between gap-6">
         <div>
-          <h2 className="text-3xl font-black tracking-tight">
+          <h2 className="text-3xl font-black text-secondary">
             {title}
           </h2>
 
-          {description && (
-            <p className="mt-4 max-w-3xl text-base leading-relaxed text-text-muted">
-              {description}
-            </p>
-          )}
+          <p className="mt-2 text-base leading-relaxed text-secondary/70">
+            {description}
+          </p>
         </div>
 
-        {/* Actions */}
-        <div className="flex items-center gap-3">
-
-          <button className="rounded-xl border border-border bg-surface p-3 transition hover:border-secondary">
-            <Moon size={16} />
-          </button>
-
-          <button
-            onClick={copyCode}
-            className="rounded-xl border border-border bg-surface p-3 transition hover:border-secondary"
-          >
-            <Copy size={16} />
-          </button>
-
-          <div className="flex items-center rounded-2xl border border-border bg-surface p-1">
-
-            <button
-              onClick={() => setTab("preview")}
-              className={`rounded-xl px-4 py-2 text-sm font-medium transition ${
-                tab === "preview"
-                  ? "bg-secondary text-primary"
-                  : "text-text-muted"
-              }`}
-            >
-              Preview
-            </button>
-
-            <button
-              onClick={() => setTab("code")}
-              className={`rounded-xl px-4 py-2 text-sm font-medium transition ${
-                tab === "code"
-                  ? "bg-secondary text-primary"
-                  : "text-text-muted"
-              }`}
-            >
-              Code
-            </button>
-
-          </div>
-        </div>
+        <button
+          onClick={() => setShowCode(!showCode)}
+          className="rounded-2xl bg-secondary px-5 py-2.5 text-sm font-semibold text-primary shadow-lg transition-all duration-300 hover:scale-105"
+        >
+          {showCode ? "Preview" : "Code"}
+        </button>
       </div>
 
-      {/* Content */}
-      <div className="overflow-hidden rounded-[32px] border border-border bg-surface">
-
-        {/* Preview */}
-        {tab === "preview" && (
-          <div className="flex min-h-[400px] items-center justify-center p-12 lg:p-20">
-            {children}
+      {/* Showcase */}
+      <div className="mt-8 overflow-hidden rounded-[32px] border border-secondary/10 bg-[#f8efe6] shadow-xl">
+        
+        {/* Preview Section */}
+        <div
+          className={`transition-all duration-500 ease-in-out ${
+            showCode
+              ? "max-h-0 overflow-hidden opacity-0"
+              : "max-h-[600px] opacity-100"
+          }`}
+        >
+          <div className="flex min-h-[220px] items-center justify-center p-10">
+            {preview}
           </div>
-        )}
+        </div>
 
-        {/* Code */}
-        {tab === "code" && (
-          <div className="overflow-x-auto p-8">
-            <pre className="text-sm leading-8 text-secondary">
+        {/* Code Section */}
+        <div
+          className={`transition-all duration-500 ease-in-out ${
+            showCode
+              ? "max-h-[1200px] opacity-100"
+              : "max-h-0 overflow-hidden opacity-0"
+          }`}
+        >
+          <div className="bg-[#381932]">
+            
+            {/* File Name */}
+            <div className="border-b border-white/10 px-6 py-4">
+              <p className="text-sm font-medium text-[#fff3e7]">
+                {fileName}
+              </p>
+            </div>
+
+            {/* Code Block */}
+            <pre className="overflow-x-auto p-6 text-sm leading-7 text-[#fff3e7]">
               <code>{code}</code>
             </pre>
           </div>
-        )}
+        </div>
       </div>
     </section>
   );

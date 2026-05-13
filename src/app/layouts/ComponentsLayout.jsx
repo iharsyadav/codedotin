@@ -1,8 +1,23 @@
-import { Link, Outlet } from "react-router-dom";
+
+import {
+  Link,
+  Outlet,
+  useLocation,
+} from "react-router-dom";
 
 import sidebarSections from "@/data/sidebarSections";
 
 export default function ComponentsLayout() {
+
+  const location = useLocation();
+
+  const currentPath =
+    location.pathname.split("/").pop();
+
+  const currentComponent =
+    currentPath.charAt(0).toUpperCase() +
+    currentPath.slice(1);
+
   return (
     <div className="flex bg-background text-text">
 
@@ -32,15 +47,32 @@ export default function ComponentsLayout() {
                 {/* Section Items */}
                 <div className="space-y-1">
 
-                  {section.items.map((item) => (
-                    <Link
-                      key={item}
-                      to={`/components/${item.toLowerCase()}`}
-                      className="flex items-center rounded-xl px-4 py-3 text-sm text-text-muted transition-all duration-300 hover:bg-primary/15 hover:text-secondary"
-                    >
-                      {item}
-                    </Link>
-                  ))}
+                  {section.items.map((item) => {
+
+                    const itemPath =
+                      `/components/${item.toLowerCase()}`;
+
+                    const isActive =
+                      location.pathname === itemPath;
+
+                    return (
+                      <Link
+                        key={item}
+                        to={itemPath}
+                        className={`
+                          flex items-center rounded-xl px-4 py-3 text-sm transition-all duration-300
+                          
+                          ${
+                            isActive
+                              ? "bg-primary text-secondary"
+                              : "text-text-muted hover:bg-primary/15 hover:text-secondary"
+                          }
+                        `}
+                      >
+                        {item}
+                      </Link>
+                    );
+                  })}
 
                 </div>
               </div>
@@ -56,29 +88,21 @@ export default function ComponentsLayout() {
         {/* Sticky Docs Navbar */}
         <header className="sticky top-[73px] z-30 border-b border-border bg-background/80 backdrop-blur-xl">
 
-          <div className="flex items-center justify-between px-6 py-4 lg:px-10">
+          <div className="flex h-[61px] items-center px-6 lg:px-10">
 
             {/* Breadcrumb */}
-            <div className="flex items-center gap-2 text-xs tracking-wide text-text-muted">
-              <span>Components</span>
+            <div className="flex items-center gap-2 text-sm tracking-wide text-text-muted">
+
+              <span>
+                Components
+              </span>
 
               <span>/</span>
 
-              <span className="text-secondary">
-                Buttons
+              <span className="font-medium text-secondary">
+                {currentComponent}
               </span>
-            </div>
 
-            {/* Actions */}
-            <div className="flex items-center gap-3">
-
-              <button className="rounded-lg border border-border bg-surface px-3 py-1.5 text-xs transition hover:border-secondary">
-                Preview
-              </button>
-
-              <button className="rounded-lg bg-secondary px-3 py-1.5 text-xs font-medium text-primary">
-                Code
-              </button>
             </div>
           </div>
         </header>
