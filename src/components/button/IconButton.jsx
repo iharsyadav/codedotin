@@ -1,34 +1,49 @@
+// IconButton.jsx
+
+import { ArrowRight, Heart, Download, Plus, ShoppingBag } from "lucide-react";
+
 import ComponentPreview from "../../app/components/componentpage/ComponentPreview";
 
-export default function Button() {
-  const buttonCode = `
-    <button className="rounded-2xl bg-gradient-to-r from-amber-300 to-orange-400 px-6 py-3 text-sm font-bold text-zinc-900 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-      Hover Me
-    </button>
-`;
+export default function IconButton() {
 
-  const buttonPreview = (
-    <>
-     <button className="rounded-2xl bg-gradient-to-r from-amber-300 to-orange-400 px-6 py-3 text-sm font-bold text-zinc-900 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-      Hover hi
-    </button>
-     <button className="rounded-2xl bg-gradient-to-r from-amber-300 to-orange-400 px-6 py-3 text-sm font-bold text-zinc-900 shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-      Hover hi
-    </button>
-    <button className="rounded-xl border border-amber-300 bg-transparent px-6 py-2.5 text-sm font-semibold text-amber-300 transition-all duration-300 hover:bg-amber-300 hover:text-zinc-900 hover:shadow-lg">
-      Primary
-    </button>
-    </>
-   
+  const preview = (
+    <div className="flex flex-wrap justify-center gap-5">
+
+      <button className="flex items-center gap-3 rounded-2xl bg-[#381932] px-7 py-4 text-sm font-bold text-white">
+        Shop Now
+        <ShoppingBag size={18} />
+      </button>
+
+      <button className="flex items-center gap-3 rounded-full bg-pink-500 px-8 py-4 text-sm font-bold text-white">
+        Wishlist
+        <Heart size={18} />
+      </button>
+
+      <button className="flex items-center gap-3 rounded-2xl bg-blue-600 px-7 py-4 text-sm font-bold text-white">
+        Download
+        <Download size={18} />
+      </button>
+
+      <button className="flex items-center gap-3 rounded-2xl border border-[#381932] bg-white px-7 py-4 text-sm font-bold text-[#381932]">
+        Create
+        <Plus size={18} />
+      </button>
+
+      <button className="flex items-center gap-3 rounded-full bg-gradient-to-r from-pink-500 to-orange-500 px-8 py-4 text-sm font-bold text-white">
+        Explore
+        <ArrowRight size={18} />
+      </button>
+
+    </div>
   );
 
   return (
     <ComponentPreview
-      title="Button"
-      description="Modern animated gradient button built using React and Tailwind CSS."
-      preview={buttonPreview}
-      code={buttonCode}
-      fileName="Button.jsx"
+      title="Icon Buttons"
+      description="Modern buttons with icons."
+      preview={preview}
+      code={`<ArrowRight size={18} />`}
+      fileName="IconButton.jsx"
     />
   );
 }

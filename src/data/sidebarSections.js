@@ -4,7 +4,10 @@ const sidebarSections = [
     items: [
       "Accordion",
       "Alert",
+      "Animation",
+      "Avatar",
       "Badge",
+      "Background",
       "Breadcrumb",
       "Button",
       "Card",

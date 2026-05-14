@@ -44,7 +44,7 @@ export default function ComponentPreview({
               : "max-h-[600px] opacity-100"
           }`}
         >
-          <div className="flex min-h-[220px] items-center justify-center p-10">
+          <div className=" p-10">
             {preview}
           </div>
         </div>
