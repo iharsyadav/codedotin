@@ -4,18 +4,17 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-        
         {/* Logo */}
-        <Link
-          to="/"
-          className="text-2xl font-black tracking-tight"
-        >
-          CODE<span className="text-secondary">DOT</span>IN
+        <Link to="/" className="flex items-center">
+          <img
+            src="/src/assets/icons/1.2.png"
+            alt="CodeDotin"
+            className="h-12 w-auto object-contain"
+          />
         </Link>
 
         {/* Nav Links */}
         <div className="hidden items-center gap-8 md:flex">
-          
           <Link
             to="/"
             className="text-text-muted transition hover:text-secondary"

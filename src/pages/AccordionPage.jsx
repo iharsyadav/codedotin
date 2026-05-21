@@ -7,21 +7,21 @@ import GradientAccordion from "../components/accordion/GradientAccordion";
 import IconAccordion from "../components/accordion/IconAccordion";
 
 export default function AccordionPage() {
-  return (<>
-  <Accordion />
+  return (
+    <>
+      <Accordion />
 
-<BorderAccordion />
+      <BorderAccordion />
 
-<GlowAccordion />
+      <GlowAccordion />
 
-<GlassAccordion />
+      <GlassAccordion />
 
-<FAQAccordion/>
+      <FAQAccordion />
 
-<GradientAccordion />
+      <GradientAccordion />
 
-<IconAccordion />
-  </>
-
-  ) 
+      <IconAccordion />
+    </>
+  );
 }

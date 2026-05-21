@@ -7,21 +7,21 @@ import SuccessAlert from "../components/alert/SuccessAlert";
 import WarningAlert from "../components/alert/WarningAlert";
 
 export default function AlertPage() {
-  return (<>
-    <Alert />
+  return (
+    <>
+      <Alert />
 
-<SuccessAlert />
+      <SuccessAlert />
 
-<ErrorAlert />
+      <ErrorAlert />
 
-<WarningAlert />
+      <WarningAlert />
 
-<InfoAlert />
+      <InfoAlert />
 
-<GlassAlert />
+      <GlassAlert />
 
-<GradientAlert />;</>
-
-  )
-  
+      <GradientAlert />
+    </>
+  );
 }
