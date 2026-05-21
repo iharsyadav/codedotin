@@ -1,6 +1,7 @@
 import Accordion from "../components/accordion/Accordion";
 import BorderAccordion from "../components/accordion/BorderAccordion";
-import FaqAccordion from "../components/accordion/FAQAccordian";
+import FAQAccordion from "../components/accordion/FAQAccordion";
+
 import GlassAccordion from "../components/accordion/GlassAccordion";
 import GlowAccordion from "../components/accordion/GlowAccordion";
 import GradientAccordion from "../components/accordion/GradientAccordion";
@@ -17,7 +18,7 @@ export default function AccordionPage() {
 
       <GlassAccordion />
 
-      <FaqAccordion />
+      <FAQAccordion />
 
       <GradientAccordion />
 
