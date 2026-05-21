@@ -97,7 +97,7 @@ import UploadPage from "../pages/UploadPage";
 import UserPage from "../pages/UserPage";
 import VideoPage from "../pages/VideoPage";
 import WrapperPage from "../pages/WrapperPage";
-import HomeApp from "./homeApp";
+import HomeApp from "./HomeApp";
 
 const router = createBrowserRouter([
   {
