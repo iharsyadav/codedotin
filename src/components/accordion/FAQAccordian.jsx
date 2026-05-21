@@ -4,7 +4,7 @@ import { ChevronDown } from "lucide-react";
 
 import ComponentPreview from "../../app/components/componentpage/ComponentPreview";
 
-export default function Accordion() {
+export default function FaqAccordion() {
 
   const [open, setOpen] = useState(0);
 
@@ -111,7 +111,7 @@ const faqItems = [
       description="Modern FAQ accordion component built using React and Tailwind CSS."
       preview={accordionPreview}
       code={accordionCode}
-      fileName="Accordion.jsx"
+      fileName="FaqAccordion.jsx"
     />
   );
 }

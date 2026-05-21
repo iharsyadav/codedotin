@@ -1,4 +1,4 @@
-import Badge from "../components/badge/badge";
+import Badge from "../components/badge/Badge";
 import ErrorBadge from "../components/badge/ErrorBadge";
 import InfoBadge from "../components/badge/InfoBadge";
 import LiveBadge from "../components/badge/LiveBadge";
@@ -34,7 +34,7 @@ export default function BadgePage() {
       <ProBadge />
 
       <LiveBadge />
-      <TagBadge/>
+      <TagBadge />
 
       <SaleBadge />
 
