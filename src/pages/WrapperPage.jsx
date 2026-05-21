@@ -1,4 +1,4 @@
-import Wrapper from "../components/wrapper/wrapper";
+import Wrapper from "../components/wrapper/Wrapper";
 
 export default function WrapperPage() {
   return <Wrapper/>;

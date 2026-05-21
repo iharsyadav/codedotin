@@ -1,5 +1,5 @@
-import Video from "../components/video/video";
+import Video from "../components/video/Video";
 
-export default function WrapperPage() {
+export default function VideoPage() {
   return <Video/>;
 }

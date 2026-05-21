@@ -1,4 +1,4 @@
-import Carousel from "../components/carousel/carousel";
+import Carousel from "../components/carousel/Carousel";
 
 export default function CarouselPage() {
   return <Carousel/>;

@@ -1,20 +1,11 @@
-import ComponentPreview from "../../app/components/componentpage/ComponentPreview";
 
-export default function Gallery() {
-  const galleryCode = ``;
 
-  const galleryPreview = (
-    <>
-    </>
-  );
-
+const glow = () => {
   return (
-    <ComponentPreview
-      title="Gallery"
-      description="Modern gallery component built using React and Tailwind CSS."
-      preview={galleryPreview}
-      code={galleryCode}
-      fileName="Gallery.jsx"
-    />
-  );
+    <div>
+      
+    </div>
+  )
 }
+
+export default glow

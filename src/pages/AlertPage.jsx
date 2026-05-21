@@ -1,4 +1,4 @@
-import Alert from "../components/alert/alert";
+import Alert from "../components/alert/Alert";
 import ErrorAlert from "../components/alert/ErrorAlert";
 import GlassAlert from "../components/alert/GlassAlert";
 import GradientAlert from "../components/alert/GradientAlert";

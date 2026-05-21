@@ -1,4 +1,4 @@
-import Empty from "../components/empty/empty";
+import Empty from "../components/empty/Empty";
 
 export default function EmptyPage() {
   return <Empty/>;

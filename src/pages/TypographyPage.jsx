@@ -1,4 +1,4 @@
-import Typography from "../components/typography/typography";
+import Typography from "../components/typography/Typography";
 
 export default function TypographyPage() {
   return <Typography/>;

@@ -1,4 +1,4 @@
-import Image from "../components/image/image";
+import Image from "../components/image/Image";
 
 export default function ImagePage() {
   return <Image/>;

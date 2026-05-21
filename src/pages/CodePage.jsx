@@ -1,4 +1,4 @@
-import Code from "../components/code/code";
+import Code from "../components/code/Code";
 
 export default function CodePage() {
   return <Code/>;

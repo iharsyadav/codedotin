@@ -1,4 +1,4 @@
-import Input from "../components/input/input";
+import Input from "../components/input/Input";
 
 export default function InputPage() {
   return <Input/>;

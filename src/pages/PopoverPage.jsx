@@ -1,4 +1,4 @@
-import Popover from "../components/popover/popover";
+import Popover from "../components/popover/Popover";
 
 export default function PopoverPage() {
   return <Popover/>;

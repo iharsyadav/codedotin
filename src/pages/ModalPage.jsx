@@ -1,4 +1,4 @@
-import Modal from "../components/modal/modal";
+import Modal from "../components/modal/Modal";
 
 export default function ModalPage() {
   return <Modal/>;
