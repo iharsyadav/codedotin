@@ -22,7 +22,7 @@ export default function Accordion() {
       >
 
         <span className="text-sm font-bold text-[#381932]">
-          Basic Accordion
+          Basic Accordion style
         </span>
 
         <span className="text-sm font-light text-[#381932]">
